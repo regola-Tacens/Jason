@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 const router = require('./app/router');
@@ -9,5 +11,5 @@ app.use(express.urlencoded({
 
 app.use(router);
 app.listen(PORT, ()=> {
-    console.log(`Argoanutes sur le quai http://localhos:${PORT}`);
+    console.log(`Argoanutes sur le quai http://localhost:${PORT}`);
 });
