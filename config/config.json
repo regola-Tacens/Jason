@@ -1,0 +1,19 @@
+{
+  "development": {
+    "username": "argo",
+    "password": "argo",
+    "database": "argo",
+    "host": "localhost",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "argo",
+    "password": "argo",
+    "database": "argo",
+    "host": "localhost",
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "use_env_variable": "DATABASE_URL"
+  }
+}
