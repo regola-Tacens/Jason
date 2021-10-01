@@ -4,9 +4,11 @@ const sequelize = new Sequelize(process.env.DATABASE_URL, {
     define: {
         underscored: true,
     },
-    ssl: {
-        rejectUnauthorized: false,
-    },
+    dialect: 'postgres',
+    protocol: 'postgres',
+    dialectOptions: {
+        ssl: true
+    }
 });
 
 
