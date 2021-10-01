@@ -7,12 +7,26 @@ const sequelize = new Sequelize(process.env.DATABASE_URL, {
     dialect: 'postgres',
     protocol: 'postgres',
     dialectOptions: {
-        ssl: {
-            require: true,
-            rejectUnauthorized: false
-        }
+        // ssl: {
+        //     require: true,
+        //     rejectUnauthorized: false
+        // }
     }
 });
+// const sequelize = new Sequelize('argo','argo','argo',{
+//     host:'localhost',
+//     define: {
+//         underscored: true,
+//     },
+//     dialect: 'postgres',
+//     protocol: 'postgres',
+//     dialectOptions: {
+//         ssl: {
+//             require: false,
+//             rejectUnauthorized: false
+//         }
+//     }
+// });
 
 
 module.exports = sequelize;
