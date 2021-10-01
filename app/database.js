@@ -1,16 +1,18 @@
 const {Sequelize} = require('sequelize');
 
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
+    // host:'localhost',
+    // port:process.env.PORT,
     define: {
         underscored: true,
     },
     dialect: 'postgres',
     protocol: 'postgres',
     dialectOptions: {
-        // ssl: {
-        //     require: true,
-        //     rejectUnauthorized: false
-        // }
+        ssl: {
+            require: true,
+            rejectUnauthorized: false
+        }
     }
 });
 // const sequelize = new Sequelize('argo','argo','argo',{
