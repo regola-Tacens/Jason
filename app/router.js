@@ -8,5 +8,6 @@ const argonauteController = require('./controllers/argonauteController');
 // });
 
 router.get('/argonautes',argonauteController.getAllArgonautes);
+router.post('/argonautes',argonauteController.createArgonaute);
 
 module.exports = router;
