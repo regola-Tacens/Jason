@@ -17,6 +17,6 @@ Argonaute.init({
     tableName: 'argonaute',
 });
 
-Argonaute.sync({ force: true });
+// Argonaute.sync({ force: true });
 
 module.exports = Argonaute;
