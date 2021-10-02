@@ -6,7 +6,7 @@ const sequelize = new Sequelize(process.env.DATABASE_URL, {
     },
     dialect: 'postgres',
     protocol: 'postgres',
-    pour la prod decommenter dialect Options
+    // pour la prod decommenter dialect Options
     dialectOptions: {
         ssl: {
             require: true,
