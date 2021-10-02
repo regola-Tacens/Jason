@@ -12,12 +12,8 @@ module.exports = {
       }
     },
     async createArgonaute(req,res) {
-      console.log(req.body);
-      console.log('request', Object.keys(req.body)[0])
-      const author = Object.keys(req.body)[0]
-      console.log('ok');
       try {
-        const argonaute = await Argonaute.create({username: author});
+        const argonaute = await Argonaute.create(req.body);
         res.json(argonaute);
       }catch (error) {
         res.status(500).send(error);
