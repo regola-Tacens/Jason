@@ -12,7 +12,15 @@ module.exports = {
       }
     },
     async createArgonaute(req,res) {
+      console.log(req.body.username)
       try {
+        // oncherche si il existe déjà un argonaute avec le meme nom
+        const existingArgonaute = await Argonaute.findOne({ where : { username : req.body.username }})
+        if(existingArgonaute){
+          console.log ('le nom existe déjà')
+          return;
+        } 
+
         const argonaute = await Argonaute.create(req.body);
         res.json(argonaute);
       }catch (error) {
