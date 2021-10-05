@@ -13,7 +13,7 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 app.use(cors({
-    origin: ['http://localhost:3000','https://peaceful-haibt-dce431.netlify.app/']
+    origin: 'https://peaceful-haibt-dce431.netlify.app'
 }));
 app.use(router);
 app.listen(PORT, ()=> {
